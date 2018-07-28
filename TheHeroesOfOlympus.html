@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title>Plain HTML Sandbox</title>
+</head>
+
+<body>
+  <div id="app">
+	  Now showing The Heroes of Olympus character {{counter+1}}<br>
+    <button @click = "counter = counter-1"><</button>
+    <img height="200" :src="images[counter]"></img>
+    <button @click = "counter = counter+1">></button><br>
+    <button @click = "images.push(nextImage)">add</button>
+    <input v-model="nextImage" type="text"></input><br>
+    Pick one of these links!
+    <ul>
+      <li>Nico http://rickriordan.com/content/uploads/2016/04/NicoDiAngelo-195x292.jpg</li>
+	    <li>Thalia http://rickriordan.com/content/uploads/2017/01/ThaliaGrace-195x292.jpg</li>
+	    <li>Reyna http://rickriordan.com/content/uploads/2016/04/ReynaRamirezArellano-195x292.jpg</li>
+
+
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+    var app=new Vue({
+      el:"#app",
+      data:{
+        counter:0,
+        nextImage:"",
+        images:["http://rickriordan.com/content/uploads/2016/04/PercyJackson-195x292.jpg",
+          "http://rickriordan.com/content/uploads/2016/04/AnnabethChase-195x292.jpg",
+          "http://rickriordan.com/content/uploads/2016/04/jason-redraw2-195x292.jpg",
+          "http://rickriordan.com/content/uploads/2016/04/PiperMcLean-195x292.jpg",
+          "http://rickriordan.com/content/uploads/2016/04/LeoValdez-195x292.jpg",
+          "http://rickriordan.com/content/uploads/2016/04/HazelLevesque-195x292.jpg",
+          "http://rickriordan.com/content/uploads/2016/04/FrankZhang-195x292.jpg"]
+      }
+    })
+  </script>
+</body>
+
+</html>
