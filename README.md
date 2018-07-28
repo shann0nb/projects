@@ -1,2 +1,2 @@
 # projects
-I got whosits and whatsits galore.
+I got whosits and whatsits galore
